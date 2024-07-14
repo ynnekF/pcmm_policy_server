@@ -1,0 +1,19 @@
+[project]
+description = "Policy server test runner"
+name = "test_runner"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = []
+dependencies = [
+    'anyio',
+    'black ~= 23.3',
+    'toml ~= 0.10',
+    "mypy==0.910",
+    "mock==4.0.3",
+    'pytest-asyncio ~= 0.21',
+    'pytest-httpx ~= 0.22',
+    'pytest-cov ~=4.1',
+    'pytest ~= 7.4',
+    'requests ~= 2.31.0'
+]
+

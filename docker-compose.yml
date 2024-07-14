@@ -1,0 +1,33 @@
+services:
+  policy_server:
+    platform: linux/amd64
+    container_name: pserver
+    hostname: pserver
+    image: pserver:tmp
+    build:
+      target: dev
+    ports: 
+      - "8000:8000"
+    ###############################################################################
+    # Entrypoints
+    ###############################################################################   
+    # entrypoint: ["make", "BUILD_OPTIMIZATIONS=1", "COMPILE_TEST=1"]
+    #
+    ## Basic server startup
+    # entrypoint: ["make", "BUILD_OPTIMIZATIONS=1", "run", "args='config=/app/config/ex_server.json'"]
+    #
+    ## Execute unit tests
+    # entrypoint: ["make", "COMPILE_TEST=1", "run", "args='unittest'"]
+    #
+    ## Run against valgrind in server mode
+    # command: ["make", "&&", "make", "BUILD_OPTIMIZATIONS=1", "valgrind", "VARG=server"]
+    #
+    ## Sleep 
+    entrypoint: ["sleep", "2147483647"]
+    volumes:
+      #
+      # Copy the template config. files, C unit tests and mock API payloads
+      # into the image's working directory (note: these are for testing only).
+      #
+      - ./tests/policy_server/unit:/app/tests/policy_server/unit
+      - ./tests/policy_server/unit/payloads:/app/tests/policy_server/unit/payloads

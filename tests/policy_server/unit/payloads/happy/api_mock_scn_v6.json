@@ -1,0 +1,43 @@
+{
+    "input": {
+      "dry_run": 2,
+      "cmts_ip": "88.7.88.9",
+      "appId": 21002,
+      "subscriberId": "2600:6ce1:0:51:7e8f:deff:fefb:3224",
+      "gate": {
+        "traffic-profile": {
+            "service-class-name":"usSMI001"
+          },
+        "gate-spec": {
+          "dscp-tos-overwrite": 0,
+          "dscp-tos-mask": 0,
+          "direction": "downstream"
+        },
+        "num-classifiers": 1,
+        "classifiers": [
+          {
+            "classifier-id": 1,
+            "ipv6-classifier": {
+              "flags": 0,
+              "srcIp6": "2600:6ce1:0:51:7e8f:deff:fefb:3224/16",
+              "dstIp6": "10:0:0:51:f8e7:ffed:bfef:4223",
+              "flow-label": 4,
+              "tc-low": 1,
+              "tc-high": 2,
+              "tc-mask": 3,
+              "protocol": 17,
+              "next-hdr": 256,
+              "srcPort-start": 190,
+              "srcPort-end": 200,
+              "dstPort-start": 210,
+              "dstPort-end": 220,
+              "activation-state": 1,
+              "action": 3,
+              "priority": 64
+            }
+          }
+        ]
+      }
+    }
+  }
+  

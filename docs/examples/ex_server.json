@@ -1,0 +1,10 @@
+{
+    "mode": "server",
+    "max_pep": 4,
+    "log_level": 1,
+    "log_stdout": 1,
+    "log_max_fsize": 2222222,
+    "connect": [],
+    "ka_timer": 45,
+    "ac_timer": 0
+}

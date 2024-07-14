@@ -1,0 +1,10 @@
+{
+    "mode": "unittest",
+    "max_pep": 5,
+    "log_level": 0,
+    "log_stdout": 1,
+    "log_max_fsize": 2222222,
+    "connect": [],
+    "ka_timer": 25,
+    "ac_timer": 10
+}

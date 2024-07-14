@@ -1,0 +1,35 @@
+{
+    "input": {
+      "dry_run": 2,
+      "cmts_ip": "88.7.88.9",
+      "appId": 21002,
+      "subscriberId":"2600:6ce1:0:51:7e8f:deff:fefb:3224",
+      "gate": {
+        "traffic-profile": {
+          "service-class-name":"usSMI001"
+        },
+        "gate-spec": {
+          "dscp-tos-overwrite":0,
+          "dscp-tos-mask":0,
+          "direction":"downstream"
+        },
+        "num-classifiers":1,
+        "classifiers": [
+          {
+            "classifier-id":1,
+            "classifier": {
+              "srcIp":"1.1.1.1",
+              "dstIp":"2.2.2.2",
+              "tos-byte":0,
+              "tos-mask":0,
+              "protocol":16,
+              "srcPort-start":200,
+              "dstPort-start":2000,
+              "priority":64,
+              "reserved":0
+            }
+          }
+        ]
+      }
+    }
+  }
